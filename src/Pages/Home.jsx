@@ -10,6 +10,9 @@ export function Home() {
             <img src={Icono} width="200" height="200"/>
             <div class="main-links">
                 <p>
+                    <Link to="/login">
+                        <span>Blog</span>
+                    </Link>
                     <Link to="/blog">
                         <span>Blog</span>
                     </Link>
