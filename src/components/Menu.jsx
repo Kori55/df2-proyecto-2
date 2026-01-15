@@ -1,6 +1,6 @@
 
 import './Menu.css'
-import "../css/App.css"
+import "../App.css"
 
 function Menu() {
     return (

@@ -1,9 +1,8 @@
-import Fondo from '../components/Fondo.jsx'
-import Menu from "../components/Menu.jsx"
+import Fondo from './components/Fondo.jsx'
+import Menu from "./components/Menu.jsx"
 import Icono from "./assets/icono.png"
-import Boton from '../components/Boton.jsx'
-
-//import {Link} from "react-counter-dom"
+import Boton from './components/Boton.jsx'
+import "./App.css"
 
 function App() {
   return (
@@ -21,15 +20,15 @@ function App() {
                 <a href="blog.jsx">
                     <span>Blog</span>
                 </a>
-                •
+                 • 
                 <a href="productos.jsx">
                     <span>Productos</span>
                 </a>
-                •
+                 • 
                 <a href="contacto.jsx">
                     <span>Contacto</span>
                 </a>
-                •
+                 • 
                 <a href="sobrenosotros.jsx">
                     <span>Sobre nosotros</span>
                 </a>
