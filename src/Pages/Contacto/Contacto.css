@@ -1,0 +1,14 @@
+.sociales {
+  scale: 2;
+  margin-top: 200px;
+  justify-content: center;
+  display: grid;
+  gap: 40px;
+  place-items: middle;
+  grid-template-columns: repeat(auto-fit, 90px);
+}
+
+.social {
+  width: 40px;
+  text-anchor:middle;
+}
