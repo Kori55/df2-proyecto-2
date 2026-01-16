@@ -7,24 +7,21 @@ function Menu() {
         <>
             <div id="menu">
                 <div id="links">
-                    <a href="iniciarsesion.jsx">
+                    <Link to="/login">
                         <span>Iniciar sesión</span>
-                    </a>
-                    <a href="blog.jsx">
+                    </Link>
+                    <Link to="/blog">
                         <span>Blog</span>
-                    </a>
-                    <a href="productos.jsx">
+                    </Link>
+                    <Link to="/productos">
                         <span>Productos</span>
-                    </a>
-                    <a href="contacto.jsx">
+                    </Link>
+                    <Link to="/contacto">
                         <span>Contacto</span>
-                    </a>
-                    <a href="sobrenosotros.jsx">
-                      <span>Sobre nosotros</span>
-                    </a>
-                    <a href="https://github.com/Kori55/df2-proyecto">
-                      <span>Github</span>
-                    </a>
+                    </Link>
+                    <Link to="/sobre-nosotros">
+                        <span>Sobre Nosotros</span>
+                    </Link>
                 </div>
             </div>
         </>

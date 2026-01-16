@@ -6,8 +6,6 @@ import {Blog} from "./Pages/Blog"
 import {IniciarSesion} from "./Pages/IniciarSesion"
 import {Productos} from "./Pages/Productos"
 
-import {Layout} from "./Layout"
-
 import "./App.css"
 import Fondo from './components/Fondo.jsx'
 import Menu from "./components/Menu.jsx"
@@ -17,18 +15,18 @@ function App() {
   return (
     <>
     <Fondo></Fondo>
-    <Menu></Menu>
     <Boton></Boton>
-        <Router>
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/contacto" element={<Contacto/>}/>
-                <Route path="/sobre-nosotros" element={<SobreNosotros/>}/>
-                <Route path="/blog" element={<Blog/>}/>
-                <Route path="/productos" element={<Productos/>}/>
-                <Route path="/login" element={<IniciarSesion/>}/>
-            </Routes>
-        </Router>
+      <Router>
+          <Menu></Menu>
+          <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/contacto" element={<Contacto/>}/>
+              <Route path="/sobre-nosotros" element={<SobreNosotros/>}/>
+              <Route path="/blog" element={<Blog/>}/>
+              <Route path="/productos" element={<Productos/>}/>
+              <Route path="/login" element={<IniciarSesion/>}/>
+          </Routes>
+      </Router>
     </>
   )
 }
