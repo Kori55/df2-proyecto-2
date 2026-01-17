@@ -7,6 +7,9 @@ function Menu() {
         <>
             <div id="menu">
                 <div id="links">
+                    <Link to="/">
+                        <span>Inicio</span>
+                    </Link>
                     <Link to="/login">
                         <span>Iniciar sesión</span>
                     </Link>
@@ -22,6 +25,9 @@ function Menu() {
                     <Link to="/sobre-nosotros">
                         <span>Sobre Nosotros</span>
                     </Link>
+                    <a href="https://github.com/Kori55/df2-proyecto-2">
+                      <span>Github</span>
+                    </a>
                 </div>
             </div>
         </>

@@ -2,7 +2,7 @@
   --fuente-1: #FFF7F9;
   --fuente-2: #000000;
   --color-bg: #F6C1D1;
-  --color-menu: #e672ba;
+  --color-menu: #e672babe;
 
   position: fixed;
   z-index: 1;
@@ -13,6 +13,7 @@
   color: var(--fuente-1);
   font-weight: 700;
   font-size: large;
+  
 }
 
 #menu a {

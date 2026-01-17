@@ -38,8 +38,10 @@ function submitButAwesomelyFake(event) {
 export function IniciarSesion() {
     return (
         <>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
             <div id="main" >
                 <h1>Inicio Sesión</h1>
+                
                 <div class="iniciosesion">
                     <form id="form" action="">
                         <div class="form-group">

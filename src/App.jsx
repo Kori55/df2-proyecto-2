@@ -2,9 +2,13 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import {Home} from "./Pages/Home"
 import {Contacto} from "./Pages/Contacto"
 import {SobreNosotros} from "./Pages/SobreNosotros"
-import {Blog} from "./Pages/Blog"
 import {IniciarSesion} from "./Pages/IniciarSesion"
+
 import {Productos} from "./Pages/Productos"
+import {VistaProducto} from "./Pages/Productos/VistaProducto.jsx"
+
+import {Blog} from "./Pages/Blog"
+import {BlogVistaPost} from "./Pages/Blog/BlogVistaPost.jsx"
 
 import "./App.css"
 import Fondo from './components/Fondo.jsx'
@@ -23,7 +27,9 @@ function App() {
               <Route path="/contacto" element={<Contacto/>}/>
               <Route path="/sobre-nosotros" element={<SobreNosotros/>}/>
               <Route path="/blog" element={<Blog/>}/>
+              <Route path="/blog/post" element={<BlogVistaPost/>}/>
               <Route path="/productos" element={<Productos/>}/>
+              <Route path="/productos/producto" element={<VistaProducto/>}/>
               <Route path="/login" element={<IniciarSesion/>}/>
           </Routes>
       </Router>
