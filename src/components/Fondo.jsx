@@ -1,4 +1,4 @@
-import fondo from "../assets/fondo idk.png"
+import fondo from "../assets/cupacke.jpg"
 
 function Fondo() {
     return (

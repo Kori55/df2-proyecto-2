@@ -5,7 +5,7 @@ import './Menu.css'
 function Menu() {
     return (
         <>
-            <div id="menu">
+            <div id="menu" class="no">
                 <div id="links">
                     <Link to="/">
                         <span>Inicio</span>

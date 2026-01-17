@@ -58,7 +58,6 @@ export function IniciarSesion() {
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary" onClick={submitButAwesomelyFake}>Enviar Datos</button>
-                            <button class="btn btn-warning">Cancelar</button>
                             <p class="alert alert-danger" id="errores"></p>
                         </div>
                     </form>
