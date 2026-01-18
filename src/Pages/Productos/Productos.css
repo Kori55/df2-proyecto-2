@@ -30,16 +30,23 @@
   font-weight: 30px;
 }
 
-.container {
+#vistaProducto .container {
+  align-items: stretch;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: auto 1fr;
 }
 
-.col2 {
-  max-height: 100%;
+#vistaProducto .container img {
   text-align: left;
+  width: 50%;
+  display: block;
 }
 
-.info {
+#vistaProducto .container .col2 {
+  width: 50%;
+  text-align: right;
+}
+
+#vistaProducto .container .col2 .info {
   margin-top: 60px;
 }
