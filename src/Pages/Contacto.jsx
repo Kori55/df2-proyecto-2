@@ -9,6 +9,10 @@ export function Contacto() {
         <>
         <div id="main">
             <h1>Contactanos</h1>
+                <div class="textolol">
+                    <input type="text"/>
+                    <button>Enviar</button>
+                </div>
         </div>
         <div class="sociales">
             <div class ="social">

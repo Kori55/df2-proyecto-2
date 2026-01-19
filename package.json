@@ -9,7 +9,7 @@
     "test": "vitest",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test:watch":"vitest --watch"
+    "test:watch": "vitest --watch"
   },
   "dependencies": {
     "react": "^19.2.0",

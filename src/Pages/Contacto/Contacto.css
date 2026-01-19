@@ -10,5 +10,26 @@
 
 .social {
   width: 40px;
-  text-anchor:middle;
+  text-anchor: middle;
+}
+
+.textolol {
+  text-align: center;
+  justify-content: center;
+  display: grid;
+  align-items: center;
+}
+
+.textolol input {
+  margin-top: 100px;
+  width: 1000px;
+  height: 300px;
+}
+
+.textolol button {
+  margin-top: 10px;
+  width: 300px;
+  height: 100px;
+  font-size: 70px;
+  text-align: center;
 }
