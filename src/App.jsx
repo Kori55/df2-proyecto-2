@@ -6,6 +6,7 @@ import {IniciarSesion} from "./Pages/IniciarSesion"
 
 import {Productos} from "./Pages/Productos"
 import {VistaProducto} from "./Pages/Productos/VistaProducto.jsx"
+import {RegistrarProducto} from "./Pages/RegistrarProducto.jsx"
 
 import {Blog} from "./Pages/Blog"
 import {BlogVistaPost} from "./Pages/Blog/BlogVistaPost.jsx"
@@ -31,6 +32,8 @@ function App() {
               <Route path="/productos" element={<Productos/>}/>
               <Route path="/productos/producto" element={<VistaProducto/>}/>
               <Route path="/login" element={<IniciarSesion/>}/>
+              <Route path="/productos/registrar" element={<RegistrarProducto/>}/>
+              <Route path="/productos/editar/:id" element={<RegistrarProducto/>}/>
           </Routes>
       </Router>
     </>
