@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import ProductoService from "../services/ProductoService";
 
 export function Productos() {
-    const [productos, setProductos] = useState([]);
+    const [productoss, setProductos] = useState([]);
 
     useEffect(() => {
         fetchProductos();
@@ -24,33 +24,30 @@ export function Productos() {
         <>
             <div id="main">
                 <h1>Productos</h1>
-            </div>
-            <Link to="/productos/registrar">Agregar nuevo producto</Link>
+                <Link to="/productos/registrar">Agregar nuevo producto</Link>
             <table>
                 <thead>
                     <tr>
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Detalles</th>
-                        <th>Categoria</th>
                         <th>Stock</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {productos.map(producto => (
+                    {Array.isArray(productoss) && productoss.map(producto => (
                         <tr key={producto.id}>
                             <td>{producto.nombre}</td>
                             <td>{producto.descripcion}</td>
                             <td>{producto.detalles}</td>
-                            <td>{producto.categoria}</td>
                             <td>{producto.stock}</td>
-                            <td>
-                                <button onClick={() => borrarProducto(producto.id)}>Borrar</button>
-                            </td>
+                            <td><button onClick={() => ProductoService.borrarProducto(producto.id)}>Borrar</button></td>
+                            <td><button><Link to='/productos/editar/${producto.id}'>Editar</Link></button></td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+            </div>
         </>
     )
 }

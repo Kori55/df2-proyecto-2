@@ -6,7 +6,6 @@ export function RegistrarProducto() {
     const [nombre, setNombre] = useState('');
     const [descripcion, setDescripcion] = useState('');
     const [detalles, setDetalles] = useState('');
-    const [categoriaID, setCategoriaID] = useState('');
     const [stock, setStock] = useState('');
     const { id } = useParams();
     const navigate = useNavigate();
@@ -17,7 +16,6 @@ export function RegistrarProducto() {
                 setNombre(response.data.nombre);
                 setDescripcion(response.data.descripcion);
                 setDetalles(response.data.detalles);
-                setCategoriaID(response.data.categoriaID);
                 setStock(response.data.stock);
             });
         }
@@ -25,9 +23,9 @@ export function RegistrarProducto() {
 
     const registrarProducto = (e) => {
         e.preventDefault();
-        const producto = { nombre, descripcion, detalles, categoriaID, stock };
+        const producto = { nombre, descripcion, detalles, stock: Number(stock) || 0 };
         if (id) {
-            ProductoService.registrarProducto(id, producto).then(() => {
+            ProductoService.actualizarProducto(id, producto).then(() => {
                 navigate('/');
             });
         } else {
@@ -70,18 +68,9 @@ export function RegistrarProducto() {
                         />
                     </div>
                     <div>
-                        <label>Categoria:</label>
-                        <input
-                            type="text"
-                            value={categoriaID}
-                            onChange={(e) => setCategoriaID(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div>
                         <label>Stock:</label>
                         <input
-                            type="text"
+                            type="number"
                             value={stock}
                             onChange={(e) => setStock(e.target.value)}
                             required
