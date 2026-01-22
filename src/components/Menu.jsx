@@ -10,6 +10,9 @@ function Menu() {
                     <Link to="/">
                         <span>Inicio</span>
                     </Link>
+                    <Link to="/admin">
+                        <span>Administrador</span>
+                    </Link>
                     <Link to="/login">
                         <span>Iniciar sesión</span>
                     </Link>

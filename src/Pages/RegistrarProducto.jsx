@@ -39,6 +39,9 @@ export function RegistrarProducto() {
         <>
             <div id="main">
                 <h2>{id ? 'Editar producto' : 'Agregar producto'}</h2>
+                <Link to="/productos-admin">
+                    <button>atrás</button>
+                </Link>
                 <form onSubmit={registrarProducto}>
                     <div>
                         <label>Nombre:</label>

@@ -1,7 +1,5 @@
-import Icono from "../assets/icono.png"
 import TituloFondo from "../assets/pastelerias-cdmx-1024x683.jpg"
 import TituloLogo from "../assets/icono.png"
-
 
 import { Link } from 'react-router-dom'
 

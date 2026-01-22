@@ -1,11 +1,13 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import {Home} from "./Pages/Home"
+import {HomeAdmin} from "./Pages/Admin/HomeAdmin.jsx"
 import {Contacto} from "./Pages/Contacto"
 import {SobreNosotros} from "./Pages/SobreNosotros"
 import {IniciarSesion} from "./Pages/IniciarSesion"
 
 import {Productos} from "./Pages/Productos"
-import {VistaProducto} from "./Pages/Productos/VistaProducto.jsx"
+import {ProductosAdmin} from "./Pages/ProductosAdmin.jsx"
+import {VistaProducto} from "./Pages/VistaProducto.jsx"
 import {RegistrarProducto} from "./Pages/RegistrarProducto.jsx"
 
 import {Blog} from "./Pages/Blog"
@@ -25,12 +27,14 @@ function App() {
           <Menu></Menu>
           <Routes>
               <Route path="/" element={<Home/>}/>
+              <Route path="/admin" element={<HomeAdmin/>}/>
               <Route path="/contacto" element={<Contacto/>}/>
               <Route path="/sobre-nosotros" element={<SobreNosotros/>}/>
               <Route path="/blog" element={<Blog/>}/>
               <Route path="/blog/post" element={<BlogVistaPost/>}/>
               <Route path="/productos" element={<Productos/>}/>
-              <Route path="/productos/producto" element={<VistaProducto/>}/>
+              <Route path="/productos-admin" element={<ProductosAdmin/>}/>
+              <Route path="/productos/:id" element={<VistaProducto/>}/>
               <Route path="/login" element={<IniciarSesion/>}/>
               <Route path="/productos/registrar" element={<RegistrarProducto/>}/>
               <Route path="/productos/editar/:id" element={<RegistrarProducto/>}/>
