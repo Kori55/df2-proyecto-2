@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = 'http://localhost:8080/api/productos';
+const BASE_URL = `http://localhost:8080/api/productos`;
 
 class ProductoService {
     listarProductos() {
@@ -8,7 +8,7 @@ class ProductoService {
     }
 
     obtenerProductoPorId(id) {
-        return axios.get({BASE_URL}+'/'+{id});
+        return axios.get(`${BASE_URL}/${id}`);
     }
 
     registrarProducto(pr) {

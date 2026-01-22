@@ -42,7 +42,7 @@ export function Productos() {
                             <td>{producto.detalles}</td>
                             <td>{producto.stock}</td>
                             <td><button onClick={() => ProductoService.borrarProducto(producto.id)}>Borrar</button></td>
-                            <td><button><Link to='/productos/editar/${producto.id}'>Editar</Link></button></td>
+                            <td><button><Link to={`/productos/editar/${producto.id}`}>Editar</Link></button></td>
                         </tr>
                     ))}
                 </tbody>
