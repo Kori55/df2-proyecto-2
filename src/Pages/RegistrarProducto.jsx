@@ -23,7 +23,7 @@ export function RegistrarProducto() {
 
     const registrarProducto = (e) => {
         e.preventDefault();
-        const producto = { nombre, descripcion, detalles, stock: Number(stock) || 0 };
+        const producto = { nombre, descripcion, detalles, stock: Number(stock) || 0, imagen: "" };
         if (id) {
             ProductoService.actualizarProducto(id, producto).then(() => {
                 navigate('/');
