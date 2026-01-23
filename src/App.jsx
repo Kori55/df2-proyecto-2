@@ -17,6 +17,7 @@ import "./App.css"
 import Fondo from './components/Fondo.jsx'
 import Menu from "./components/Menu.jsx"
 import Boton from './components/Boton.jsx'
+import Carrito from './components/Carrito.jsx'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
     <Boton></Boton>
       <Router>
           <Menu></Menu>
+          <Carrito></Carrito>
           <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/admin" element={<HomeAdmin/>}/>

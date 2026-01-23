@@ -1,0 +1,30 @@
+#carrito {
+    position: fixed;
+    z-index: 2;
+    width: 200px;
+    height: fit-content;
+    background-color: rgba(24, 212, 24, 0.26);
+    top: 0;
+    right: 0;
+}
+
+#carro table {
+    top: 0;
+    right: 0;
+    position: fixed;
+}
+
+#listado {
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+
+#carrito button {
+    background-color: rgba(0, 255, 255, 0.26);
+    width: 100px;
+    height: 100px;
+}
+
+#carrito.no {
+    visibility: hidden;
+}
