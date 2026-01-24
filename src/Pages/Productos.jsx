@@ -3,24 +3,7 @@ import cupcake from "../assets/cupacke.jpg"
 import { Link } from "react-router-dom"
 import React, { useState, useEffect } from 'react';
 import ProductoService from "../services/ProductoService";
-
-function agregarAlCarrito(producto) {
-    const carritoActual = JSON.parse(localStorage.getItem("carrito")) || [];
-
-    const existe = carritoActual.find(p => p.id === producto.id);
-
-    if (existe) {
-        existe.cantidad += 1;
-    } else {
-        carritoActual.push({
-            id: producto.id,
-            nombre: producto.nombre,
-            cantidad: 1
-        });
-    }
-
-    localStorage.setItem("carrito", JSON.stringify(carritoActual));
-}
+import CarritoService from "../services/CarritoService";
 
 export function Productos() {
     const [productoss, setProductos] = useState([]);
@@ -36,6 +19,12 @@ export function Productos() {
         }).catch(error => {
             console.log('Error', error);
         });
+    };
+
+    const agregarAlCarrito = (productoId) => {
+        CarritoService.agregarProducto(productoId)
+            .then(() => alert("Producto agregado al carrito"))
+            .catch(err => console.error(err));
     };
 
     return (
@@ -59,7 +48,7 @@ export function Productos() {
                             <td>{producto.detalles}</td>
                             <td>{producto.stock}</td>
                             <td><button><Link to={`/productos/${producto.id}`}>Ver</Link></button></td>
-                            <td><button onClick={() => agregarAlCarrito(producto)}>Agregar al carrito</button></td>
+                            <td><button onClick={() => agregarAlCarrito(producto.id)}>Agregar al carrito</button></td>
                         </tr>
                     ))}
                 </tbody>

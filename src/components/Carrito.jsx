@@ -1,25 +1,36 @@
-import './Carrito.css'
+import { useEffect, useState } from "react";
+import axios from "axios";
+import "./Carrito.css";
+
+import CarritoService from "../services/CarritoService";
 
 function Carrito() {
-    
-    const carro = JSON.parse(localStorage.getItem("carrito")) || [];
+    const [carro, setCarro] = useState(null);
+
+    useEffect(() => {
+    CarritoService.obtenerCarro()
+        .then(res => setCarro(res.data))
+        .catch(err => console.error(err));
+}, []);
 
     return (
         <div id="carrito">
             <button>Ver carrito</button>
+
             <div id="carro">
                 <table>
                     <tbody id="listado">
-                        {carro.length === 0 && (
+                        {!carro?.items || carro.items.length === 0 ? (
                             <tr>
                                 <td>Carrito vacío</td>
                             </tr>
+                        ) : (
+                            carro.items.map(item => (
+                                <tr key={item.id}>
+                                    <td>{item.producto.nombre}</td>
+                                </tr>
+                            ))
                         )}
-                        {carro.map((producto, index) => (
-                            <tr key={index}>
-                                <td>{producto.nombre}</td>
-                            </tr>
-                        ))}
                     </tbody>
                 </table>
             </div>
