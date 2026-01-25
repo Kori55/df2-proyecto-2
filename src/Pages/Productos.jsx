@@ -6,8 +6,7 @@ import ProductoService from "../services/ProductoService";
 import CarritoService from "../services/CarritoService";
 
 export function Productos() {
-    const [productoss, setProductos] = useState([]);
-    
+    const [productoss, setProductos] = useState([]); 
 
     useEffect(() => {
         fetchProductos();

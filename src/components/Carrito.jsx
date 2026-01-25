@@ -8,10 +8,16 @@ function Carrito() {
     const [carro, setCarro] = useState(null);
 
     useEffect(() => {
-    CarritoService.obtenerCarro()
-        .then(res => setCarro(res.data))
-        .catch(err => console.error(err));
-}, []);
+        CarritoService.obtenerCarro()
+            .then(res => setCarro(res.data))
+            .catch(err => console.error(err));
+    }, []);
+
+    const quitarProducto = (productoId) => {
+        CarritoService.quitarProducto(productoId)
+            .then(() => alert("Producto borrado del carrito"))
+            .catch(err => console.error(err));
+    };
 
     return (
         <div id="carrito">
@@ -28,6 +34,7 @@ function Carrito() {
                             carro.items.map(item => (
                                 <tr key={item.id}>
                                     <td>{item.producto.nombre}</td>
+                                    <td><button onClick={() => quitarProducto(item.id)}>Borrar</button></td>
                                 </tr>
                             ))
                         )}
